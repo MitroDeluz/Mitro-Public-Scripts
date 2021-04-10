@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
             for k, v in pairs(Locations) do
                 RageUI.Button(Locations[k].Name, "", {}, true, { -- 5
                 onSelected = function()
-                    SetEntityCoords(GetPlayerPed(-1), Locations[k].x, Locations[k].y, Locations[k].z)
+                    SetEntityCoords(PlayerPedId(), Locations[k].x, Locations[k].y, Locations[k].z)
                 end
                 });
             end
@@ -58,7 +58,7 @@ end)
 
 
 
---- If ur not braindead u will understand how this works
+--- If ur not braindead u will understand how this works, this is also better, so for example in your respawn handler or whatever
 
 function OpenMenu() 
     RageUI.Visible(TeleportLocationsMenu, true)
